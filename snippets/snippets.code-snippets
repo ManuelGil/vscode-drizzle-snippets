@@ -1,0 +1,412 @@
+{
+  "id serial primary key": {
+    "prefix": ["dz_id_serial", "id serial"],
+    "scope": "javascript,typescript",
+    "body": "id: serial('id').primaryKey(),"
+  },
+  "id bigint primary key": {
+    "prefix": ["dz_id_bigint", "id bigint"],
+    "scope": "javascript,typescript",
+    "body": "id: bigint('id', { mode: 'number' }).primaryKey().autoincrement(),"
+  },
+  "binary": {
+    "prefix": ["dz_binary", "binary"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: binary('${1:name}', { length: ${2:length} }),"
+  },
+  "bigserial": {
+    "prefix": ["dz_bigserial", "bigserial"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: bigserial('${1:name}', { mode: '${2:mode}'}),"
+  },
+  "boolean": {
+    "prefix": ["dz_boolean", "boolean"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: boolean('${1:name}'),"
+  },
+  "blob": {
+    "prefix": ["dz_blob", "blob"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: blob('${1:name}', { mode: '${2:mode}' }),"
+  },
+  "char": {
+    "prefix": ["dz_char", "char"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: char('${1:name}', { length: ${2:length} }),"
+  },
+  "cidr": {
+    "prefix": ["dz_cidr", "cidr"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: cidr('${1:name}'),"
+  },
+  "date": {
+    "prefix": ["dz_date", "date"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: date('${1:name}', { mode: '${2:mode}' }),"
+  },
+  "datetime": {
+    "prefix": ["dz_datetime", "datetime"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: datetime('${1:name}', { mode: '${2:mode}' }),"
+  },
+  "decimal": {
+    "prefix": ["dz_decimal", "decimal"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: decimal('${1:name}', { precision: ${2:precision}, scale: ${3:scale} }),"
+  },
+  "double": {
+    "prefix": ["dz_double", "double"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: double('${1:name}', { precision: ${2:precision}, scale: ${3:scale} }),"
+  },
+  "doublePrecision": {
+    "prefix": ["dz_doublePrecision", "doublePrecision"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: doublePrecision('${1:name}'),"
+  },
+  "pgEnum": {
+    "prefix": ["dz_pgEnum", "pgEnum"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: pgEnum(enumName: '${1:name}', values: [${2:values}]),"
+  },
+  "float": {
+    "prefix": ["dz_float", "float"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: float('${1:name}'),"
+  },
+  "inet": {
+    "prefix": ["dz_inet", "inet"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: inet('${1:name}'),"
+  },
+  "int": {
+    "prefix": ["dz_int", "int"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: int('${1:name}', { unsigned: ${2:true} }),"
+  },
+  "integer": {
+    "prefix": ["dz_integer", "integer"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: integer('${1:name}'),"
+  },
+  "interval": {
+    "prefix": ["dz_interval", "interval"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: interval('${1:name}', { fields: '${2:year}', precision: ${3:10} }),"
+  },
+  "json": {
+    "prefix": ["dz_json", "json"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: json('${1:name}'),"
+  },
+  "jsonb": {
+    "prefix": ["dz_jsonb", "jsonb"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: jsonb('${1:name}'),"
+  },
+  "macaddr": {
+    "prefix": ["dz_macaddr", "macaddr"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: macaddr('${1:name}'),"
+  },
+  "macaddr8": {
+    "prefix": ["dz_macaddr8", "macaddr8"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: macaddr8('${1:name}'),"
+  },
+  "mediumint": {
+    "prefix": ["dz_mediumint", "mediumint"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: mediumint('${1:name}'),"
+  },
+  "numeric": {
+    "prefix": ["dz_numeric", "numeric"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: numeric('${1:name}'),"
+  },
+  "real": {
+    "prefix": ["dz_real", "real"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: real('${1:name}', { precision: ${2:precision}, scale: ${3:scale} }),"
+  },
+  "serial": {
+    "prefix": ["dz_serial", "serial"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: serial('${1:name}'),"
+  },
+  "smallint": {
+    "prefix": ["dz_smallint", "smallint"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: smallint('${1:name}'),"
+  },
+  "smallserial": {
+    "prefix": ["dz_smallserial", "smallserial"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: smallserial('${1:name}'),"
+  },
+  "text": {
+    "prefix": ["dz_text", "text"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: text('${1:name}'),"
+  },
+  "tinytext": {
+    "prefix": ["dz_tinytext", "tinytext"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: tinytext('${1:name}'),"
+  },
+  "mediumtext": {
+    "prefix": ["dz_mediumtext", "mediumtext"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: mediumtext('${1:name}'),"
+  },
+  "longtext": {
+    "prefix": ["dz_longtext", "longtext"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: longtext('${1:name}'),"
+  },
+  "time": {
+    "prefix": ["dz_time", "time"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: time('${1:name}'),"
+  },
+  "timestamp": {
+    "prefix": ["dz_timestamp", "timestamp"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: timestamp('${1:name}', { mode: '${2:mode}' }),"
+  },
+  "tinyint": {
+    "prefix": ["dz_tinyint", "tinyint"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: tinyint('${1:name}'),"
+  },
+  "uuid": {
+    "prefix": ["dz_uuid", "uuid"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: uuid('${1:name}'),"
+  },
+  "varbinary": {
+    "prefix": ["dz_varbinary", "varbinary"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: varbinary('${1:name}', { length: ${2:length} }),"
+  },
+  "varchar": {
+    "prefix": ["dz_varchar", "varchar"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: varchar('${1:name}', { length: ${2:length} }),"
+  },
+  "year": {
+    "prefix": ["dz_year", "year"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}: year('${1:name}'),"
+  },
+  "references": {
+    "prefix": ["dz_references", "int references"],
+    "scope": "javascript,typescript",
+    "body": "${1:name}Id: int('${1:name}_id').references(() => ${2:table}.${3:column}),"
+  },
+  "select": {
+    "prefix": ["dz_select", "select"],
+    "scope": "javascript,typescript",
+    "body": ["await db.select({", "    $1,", "  })", "  .from(${2:table})", "  .where(", "    $3,", "  );", ""]
+  },
+  "selectDistinct": {
+    "prefix": ["dz_select_distinct", "selectDistinct"],
+    "scope": "javascript,typescript",
+    "body": ["await db.selectDistinct({", "    $1,", "  })", "  .from(${2:table})", "  .where(", "    $3,", "  );", ""]
+  },
+  "selectDistinctOn": {
+    "prefix": ["dz_select_distinct_on", "selectDistinctOn"],
+    "scope": "javascript,typescript",
+    "body": ["await db.selectDistinctOn([", "    $1,", "  ]), {", "    $2,", "  })", "  .from(${3:table})", "  .where(", "    $4,", "  );", ""]
+  },
+  "limit & offset": {
+    "prefix": ["dz_limit", "limit"],
+    "scope": "javascript,typescript",
+    "body": ["await db.select({", "    $1,", "  })", "  .from(${2:table})", "  .limit(${3:limit})", "  .offset(${4:offset});", ""]
+  },
+  "orderBy": {
+    "prefix": ["dz_order_by", "orderBy"],
+    "scope": "javascript,typescript",
+    "body": ["await db.select({", "    $1,", "  })", "  .from(${2:table})", "  .orderBy(${3:column});", ""]
+  },
+  "groupBy": {
+    "prefix": ["dz_group_by", "groupBy"],
+    "scope": "javascript,typescript",
+    "body": ["await db.select({", "    $1,", "  })", "  .from(${2:table})", "  .groupBy(${3:column})", "  .having(({ $4 }) => $5);", ""]
+  },
+  "$with": {
+    "prefix": ["dz__with", "$with"],
+    "scope": "javascript,typescript",
+    "body": ["db.\\$with(${1:alias}).as(", "    db.select({", "      $2,", "    })", "    .from(${3:table})", "    .where(", "      $4,", "    )", "  );", ""]
+  },
+  "with": {
+    "prefix": ["dz_with", "with"],
+    "scope": "javascript,typescript",
+    "body": ["db.with(${1:alias})", "  .select({", "    $2,", "  })", "  .from(${1:alias})", "  .where(", "    $3,", "  );", ""]
+  },
+  "update": {
+    "prefix": ["dz_update", "update"],
+    "scope": "javascript,typescript",
+    "body": ["await db.update(${1:table}).set({", "    $2,", "  }).where(", "    $3,", "  );", ""]
+  },
+  "insert": {
+    "prefix": ["dz_insert", "insert"],
+    "scope": "javascript,typescript",
+    "body": ["await db.insert(${1:table}).values({", "    $2,", "  });", ""]
+  },
+  "onConflictDoNothing": {
+    "prefix": ["dz_on_conflict_do_nothing", "onConflictDoNothing"],
+    "scope": "javascript,typescript",
+    "body": ["await db.insert(${1:table}).values({", "    $2,", "  }).onConflictDoNothing({", "    target: ${3:column},", "  });", ""]
+  },
+  "onConflictDoUpdate": {
+    "prefix": ["dz_on_conflict_do_update", "onConflictDoUpdate"],
+    "scope": "javascript,typescript",
+    "body": ["await db.insert(${1:table}).values({", "    $2,", "  }).onConflictDoUpdate({", "    target: ${3:column},", "    set: {", "      $4,", "    },", "  });", ""]
+  },
+  "onDuplicateKeyUpdate": {
+    "prefix": ["dz_on_duplicate_key_update", "onDuplicateKeyUpdate"],
+    "scope": "javascript,typescript",
+    "body": ["await db.insert(${1:table}).values({", "    $2,", "  }).onDuplicateKeyUpdate({", "    set: {", "      $3,", "    },", "  });", ""]
+  },
+  "delete": {
+    "prefix": ["dz_delete", "delete"],
+    "scope": "javascript,typescript",
+    "body": ["await db.delete(${1:table}).where(", "    $2,", "  );", ""]
+  },
+  "leftJoin": {
+    "prefix": ["dz_left_join", "leftJoin"],
+    "scope": "javascript,typescript",
+    "body": ["await db.select({", "    $1,", "  })", "  .from(${2:table})", "  .leftJoin(${3:table}, ${4:condition});", ""]
+  },
+  "rightJoin": {
+    "prefix": ["dz_right_join", "rightJoin"],
+    "scope": "javascript,typescript",
+    "body": ["await db.select({", "    $1,", "  })", "  .from(${2:table})", "  .rightJoin(${3:table}, ${4:condition});", ""]
+  },
+  "innerJoin": {
+    "prefix": ["dz_inner_join", "innerJoin"],
+    "scope": "javascript,typescript",
+    "body": ["await db.select({", "    $1,", "  })", "  .from(${2:table})", "  .innerJoin(${3:table}, ${4:condition});", ""]
+  },
+  "fullJoin": {
+    "prefix": ["dz_full_join", "fullJoin"],
+    "scope": "javascript,typescript",
+    "body": ["await db.select({", "    $1,", "  })", "  .from(${2:table})", "  .fullJoin(${3:table}, ${4:condition});", ""]
+  },
+  "eq": {
+    "prefix": ["dz_eq", "eq"],
+    "scope": "javascript,typescript",
+    "body": "eq(${1:column}, ${2:value})"
+  },
+  "ne": {
+    "prefix": ["dz_ne", "ne"],
+    "scope": "javascript,typescript",
+    "body": "ne(${1:column}, ${2:value})"
+  },
+  "gt": {
+    "prefix": ["dz_gt", "gt"],
+    "scope": "javascript,typescript",
+    "body": "gt(${1:column}, ${2:value})"
+  },
+  "gte": {
+    "prefix": ["dz_gte", "gte"],
+    "scope": "javascript,typescript",
+    "body": "gte(${1:column}, ${2:value})"
+  },
+  "lt": {
+    "prefix": ["dz_lt", "lt"],
+    "scope": "javascript,typescript",
+    "body": "lt(${1:column}, ${2:value})"
+  },
+  "lte": {
+    "prefix": ["dz_lte", "lte"],
+    "scope": "javascript,typescript",
+    "body": "lte(${1:column}, ${2:value})"
+  },
+  "isNull": {
+    "prefix": ["dz_is_null", "isNull"],
+    "scope": "javascript,typescript",
+    "body": "isNull(${1:column})"
+  },
+  "isNotNull": {
+    "prefix": ["dz_is_not_null", "isNotNull"],
+    "scope": "javascript,typescript",
+    "body": "isNotNull(${1:column})"
+  },
+  "inArray": {
+    "prefix": ["dz_in_array", "inArray"],
+    "scope": "javascript,typescript",
+    "body": "inArray(${1:column}, ${2:array})"
+  },
+  "notInArray": {
+    "prefix": ["dz_not_in_array", "notInArray"],
+    "scope": "javascript,typescript",
+    "body": "notInArray(${1:column}, ${2:array})"
+  },
+  "exists": {
+    "prefix": ["dz_exists", "exists"],
+    "scope": "javascript,typescript",
+    "body": "exists(${1:column})"
+  },
+  "notExists": {
+    "prefix": ["dz_not_exists", "notExists"],
+    "scope": "javascript,typescript",
+    "body": "notExists(${1:column})"
+  },
+  "between": {
+    "prefix": ["dz_between", "between"],
+    "scope": "javascript,typescript",
+    "body": "between(${1:column}, ${2:from}, ${3:to})"
+  },
+  "notBetween": {
+    "prefix": ["dz_not_between", "notBetween"],
+    "scope": "javascript,typescript",
+    "body": "notBetween(${1:column}, ${2:from}, ${3:to})"
+  },
+  "like": {
+    "prefix": ["dz_like", "like"],
+    "scope": "javascript,typescript",
+    "body": "like(${1:column}, ${2:value})"
+  },
+  "ilike": {
+    "prefix": ["dz_ilike", "ilike"],
+    "scope": "javascript,typescript",
+    "body": "ilike(${1:column}, ${2:value})"
+  },
+  "notIlike": {
+    "prefix": ["dz_not_ilike", "notIlike"],
+    "scope": "javascript,typescript",
+    "body": "notIlike(${1:column}, ${2:value})"
+  },
+  "not": {
+    "prefix": ["dz_not", "not"],
+    "scope": "javascript,typescript",
+    "body": "not(${1:condition})"
+  },
+  "and": {
+    "prefix": ["dz_and", "and"],
+    "scope": "javascript,typescript",
+    "body": "and(${1:condition}, ${2:condition})"
+  },
+  "or": {
+    "prefix": ["dz_or", "or"],
+    "scope": "javascript,typescript",
+    "body": "or(${1:condition}, ${2:condition})"
+  },
+  "arrayContains": {
+    "prefix": ["dz_array_contains", "arrayContains"],
+    "scope": "javascript,typescript",
+    "body": "arrayContains(${1:column}, ${2:value})"
+  },
+  "arrayContained": {
+    "prefix": ["dz_array_contained", "arrayContained"],
+    "scope": "javascript,typescript",
+    "body": "arrayContained(${1:column}, ${2:value})"
+  },
+  "arrayOverlaps": {
+    "prefix": ["dz_array_overlaps", "arrayOverlaps"],
+    "scope": "javascript,typescript",
+    "body": "arrayOverlaps(${1:column}, ${2:value})"
+  }
+}

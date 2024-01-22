@@ -1,0 +1,51 @@
+{
+  "name": "vscode-drizzle-snippets",
+  "displayName": "Drizzle ORM snippets",
+  "description": "This extension for Visual Studio Code adds snippets for Drizzle ORM. Now you can create your Drizzle ORM files faster and easier.",
+  "version": "1.0.0",
+  "icon": "icon.png",
+  "license": "MIT",
+  "publisher": "imgildev",
+  "author": {
+    "name": "Manuel Gil",
+    "url": "https://github.com/ManuelGil"
+  },
+  "sponsor": {
+    "url": "https://github.com/sponsors/manuelgil"
+  },
+  "engines": {
+    "vscode": "^1.46.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "drizzle db",
+    "drizzle orm",
+    "drizzle-orm",
+    "drizzle",
+    "orm drizzle-db",
+    "orm drizzle-orm",
+    "orm drizzle",
+    "orm",
+    "snippet",
+    "snippets",
+    "vscode"
+  ],
+  "homepage": "https://github.com/ManuelGil/vscode-drizzle-snippets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ManuelGil/vscode-drizzle-snippets"
+  },
+  "bugs": {
+    "url": "https://github.com/ManuelGil/vscode-drizzle-snippets/issues"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}

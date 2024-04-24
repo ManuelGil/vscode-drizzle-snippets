@@ -207,92 +207,92 @@
   "select": {
     "prefix": ["dz_select", "select"],
     "scope": "javascript,typescript",
-    "body": ["await db.select({", "    $1,", "  })", "  .from(${2:table})", "  .where(", "    $3,", "  );", ""]
+    "body": ["await db.select({", "\t\t$1,", "\t})", "\t.from(${2:table})", "\t.where(", "\t\t$3,", "\t);", ""]
   },
   "selectDistinct": {
     "prefix": ["dz_select_distinct", "selectDistinct"],
     "scope": "javascript,typescript",
-    "body": ["await db.selectDistinct({", "    $1,", "  })", "  .from(${2:table})", "  .where(", "    $3,", "  );", ""]
+    "body": ["await db.selectDistinct({", "\t\t$1,", "\t})", "\t.from(${2:table})", "\t.where(", "\t\t$3,", "\t);", ""]
   },
   "selectDistinctOn": {
     "prefix": ["dz_select_distinct_on", "selectDistinctOn"],
     "scope": "javascript,typescript",
-    "body": ["await db.selectDistinctOn([", "    $1,", "  ]), {", "    $2,", "  })", "  .from(${3:table})", "  .where(", "    $4,", "  );", ""]
+    "body": ["await db.selectDistinctOn([", "\t\t$1,", "\t]), {", "\t\t$2,", "\t})", "\t.from(${3:table})", "\t.where(", "\t\t$4,", "\t);", ""]
   },
   "limit & offset": {
     "prefix": ["dz_limit", "limit"],
     "scope": "javascript,typescript",
-    "body": ["await db.select({", "    $1,", "  })", "  .from(${2:table})", "  .limit(${3:limit})", "  .offset(${4:offset});", ""]
+    "body": ["await db.select({", "\t\t$1,", "\t})", "\t.from(${2:table})", "\t.limit(${3:limit})", "\t.offset(${4:offset});", ""]
   },
   "orderBy": {
     "prefix": ["dz_order_by", "orderBy"],
     "scope": "javascript,typescript",
-    "body": ["await db.select({", "    $1,", "  })", "  .from(${2:table})", "  .orderBy(${3:column});", ""]
+    "body": ["await db.select({", "\t\t$1,", "\t})", "\t.from(${2:table})", "\t.orderBy(${3:column});", ""]
   },
   "groupBy": {
     "prefix": ["dz_group_by", "groupBy"],
     "scope": "javascript,typescript",
-    "body": ["await db.select({", "    $1,", "  })", "  .from(${2:table})", "  .groupBy(${3:column})", "  .having(({ $4 }) => $5);", ""]
+    "body": ["await db.select({", "\t\t$1,", "\t})", "\t.from(${2:table})", "\t.groupBy(${3:column})", "\t.having(({ $4 }) => $5);", ""]
   },
   "$with": {
     "prefix": ["dz__with", "$with"],
     "scope": "javascript,typescript",
-    "body": ["db.\\$with(${1:alias}).as(", "    db.select({", "      $2,", "    })", "    .from(${3:table})", "    .where(", "      $4,", "    )", "  );", ""]
+    "body": ["db.\\$with(${1:alias}).as(", "\t\tdb.select({", "\t\t\t$2,", "\t\t})", "\t\t.from(${3:table})", "\t\t.where(", "\t\t\t$4,", "\t\t)", "\t);", ""]
   },
   "with": {
     "prefix": ["dz_with", "with"],
     "scope": "javascript,typescript",
-    "body": ["db.with(${1:alias})", "  .select({", "    $2,", "  })", "  .from(${1:alias})", "  .where(", "    $3,", "  );", ""]
+    "body": ["db.with(${1:alias})", "\t.select({", "\t\t$2,", "\t})", "\t.from(${1:alias})", "\t.where(", "\t\t$3,", "\t)", "\t.returning({", "\t\t$4,", "\t});", ""]
   },
   "update": {
     "prefix": ["dz_update", "update"],
     "scope": "javascript,typescript",
-    "body": ["await db.update(${1:table}).set({", "    $2,", "  }).where(", "    $3,", "  );", ""]
+    "body": ["await db.update(${1:table}).set({", "\t\t$2,", "\t}).where(", "\t\t$3,", "\t);", ""]
   },
   "insert": {
     "prefix": ["dz_insert", "insert"],
     "scope": "javascript,typescript",
-    "body": ["await db.insert(${1:table}).values({", "    $2,", "  });", ""]
+    "body": ["await db.insert(${1:table}).values({", "\t\t$2,", "\t});", ""]
   },
   "onConflictDoNothing": {
     "prefix": ["dz_on_conflict_do_nothing", "onConflictDoNothing"],
     "scope": "javascript,typescript",
-    "body": ["await db.insert(${1:table}).values({", "    $2,", "  }).onConflictDoNothing({", "    target: ${3:column},", "  });", ""]
+    "body": ["await db.insert(${1:table}).values({", "\t\t$2,", "\t}).onConflictDoNothing({", "\t\ttarget: ${3:column},", "\t});", ""]
   },
   "onConflictDoUpdate": {
     "prefix": ["dz_on_conflict_do_update", "onConflictDoUpdate"],
     "scope": "javascript,typescript",
-    "body": ["await db.insert(${1:table}).values({", "    $2,", "  }).onConflictDoUpdate({", "    target: ${3:column},", "    set: {", "      $4,", "    },", "  });", ""]
+    "body": ["await db.insert(${1:table}).values({", "\t\t$2,", "\t}).onConflictDoUpdate({", "\t\ttarget: ${3:column},", "\t\ttargetWhere: {", "\t\t\t$4,", "\t\t},", "\t\tset: {", "\t\t\t$5,", "\t\t},", "\t\tsetWhere: {", "\t\t\t$6,", "\t\t},", "\t});", ""]
   },
   "onDuplicateKeyUpdate": {
     "prefix": ["dz_on_duplicate_key_update", "onDuplicateKeyUpdate"],
     "scope": "javascript,typescript",
-    "body": ["await db.insert(${1:table}).values({", "    $2,", "  }).onDuplicateKeyUpdate({", "    set: {", "      $3,", "    },", "  });", ""]
+    "body": ["await db.insert(${1:table}).values({", "\t\t$2,", "\t}).onDuplicateKeyUpdate({", "\t\tset: {", "\t\t\t$3,", "\t\t},", "\t});", ""]
   },
   "delete": {
     "prefix": ["dz_delete", "delete"],
     "scope": "javascript,typescript",
-    "body": ["await db.delete(${1:table}).where(", "    $2,", "  );", ""]
+    "body": ["await db.delete(${1:table}).where(", "\t\t$2,", "\t);", ""]
   },
   "leftJoin": {
     "prefix": ["dz_left_join", "leftJoin"],
     "scope": "javascript,typescript",
-    "body": ["await db.select({", "    $1,", "  })", "  .from(${2:table})", "  .leftJoin(${3:table}, ${4:condition});", ""]
+    "body": ["await db.select({", "\t\t$1,", "\t})", "\t.from(${2:table})", "\t.leftJoin(${3:table}, ${4:condition});", ""]
   },
   "rightJoin": {
     "prefix": ["dz_right_join", "rightJoin"],
     "scope": "javascript,typescript",
-    "body": ["await db.select({", "    $1,", "  })", "  .from(${2:table})", "  .rightJoin(${3:table}, ${4:condition});", ""]
+    "body": ["await db.select({", "\t\t$1,", "\t})", "\t.from(${2:table})", "\t.rightJoin(${3:table}, ${4:condition});", ""]
   },
   "innerJoin": {
     "prefix": ["dz_inner_join", "innerJoin"],
     "scope": "javascript,typescript",
-    "body": ["await db.select({", "    $1,", "  })", "  .from(${2:table})", "  .innerJoin(${3:table}, ${4:condition});", ""]
+    "body": ["await db.select({", "\t\t$1,", "\t})", "\t.from(${2:table})", "\t.innerJoin(${3:table}, ${4:condition});", ""]
   },
   "fullJoin": {
     "prefix": ["dz_full_join", "fullJoin"],
     "scope": "javascript,typescript",
-    "body": ["await db.select({", "    $1,", "  })", "  .from(${2:table})", "  .fullJoin(${3:table}, ${4:condition});", ""]
+    "body": ["await db.select({", "\t\t$1,", "\t})", "\t.from(${2:table})", "\t.fullJoin(${3:table}, ${4:condition});", ""]
   },
   "eq": {
     "prefix": ["dz_eq", "eq"],

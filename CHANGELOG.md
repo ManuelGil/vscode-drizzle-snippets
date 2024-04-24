@@ -7,9 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2024-04-24
+
+### Changed
+
+- Update code snippets for better readability and indentation
+- Update `with` snippet to include `returning` clause
+- Update `onConflictDoUpdate` snippet to include `setWhere` and `targetWhere` fields
+
 ## [1.0.0] - 2024-01-22
 
 - Initial release
 
-[unreleased]: https://github.com/ManuelGil/vscode-drizzle-snippets/compare/v1.0.0...HEAD
+[unreleased]: https://github.com/ManuelGil/vscode-drizzle-snippets/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/ManuelGil/vscode-drizzle-snippets/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/ManuelGil/vscode-drizzle-snippets/releases/tag/v1.0.0

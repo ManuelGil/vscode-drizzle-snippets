@@ -1,412 +1,769 @@
 {
   "id serial primary key": {
-    "prefix": ["dz_id_serial", "id serial"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_id_serial",
+      "id serial"
+    ],
     "body": "id: serial('id').primaryKey(),"
   },
   "id bigint primary key": {
-    "prefix": ["dz_id_bigint", "id bigint"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_id_bigint",
+      "id bigint"
+    ],
     "body": "id: bigint('id', { mode: 'number' }).primaryKey().autoincrement(),"
   },
   "binary": {
-    "prefix": ["dz_binary", "binary"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_binary",
+      "binary"
+    ],
     "body": "${1:name}: binary('${1:name}', { length: ${2:length} }),"
   },
   "bigserial": {
-    "prefix": ["dz_bigserial", "bigserial"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_bigserial",
+      "bigserial"
+    ],
     "body": "${1:name}: bigserial('${1:name}', { mode: '${2:mode}'}),"
   },
   "boolean": {
-    "prefix": ["dz_boolean", "boolean"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_boolean",
+      "boolean"
+    ],
     "body": "${1:name}: boolean('${1:name}'),"
   },
   "blob": {
-    "prefix": ["dz_blob", "blob"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_blob",
+      "blob"
+    ],
     "body": "${1:name}: blob('${1:name}', { mode: '${2:mode}' }),"
   },
   "char": {
-    "prefix": ["dz_char", "char"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_char",
+      "char"
+    ],
     "body": "${1:name}: char('${1:name}', { length: ${2:length} }),"
   },
   "cidr": {
-    "prefix": ["dz_cidr", "cidr"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_cidr",
+      "cidr"
+    ],
     "body": "${1:name}: cidr('${1:name}'),"
   },
   "date": {
-    "prefix": ["dz_date", "date"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_date",
+      "date"
+    ],
     "body": "${1:name}: date('${1:name}', { mode: '${2:mode}' }),"
   },
   "datetime": {
-    "prefix": ["dz_datetime", "datetime"],
-    "scope": "javascript,typescript",
-    "body": "${1:name}: datetime('${1:name}', { mode: '${2:mode}' }),"
+    "prefix": [
+      "dz_datetime",
+      "datetime"
+    ],
+    "body": "${1:name}: datetime('${1:name}', { mode: '${2|string,date|}' }).defaultNow(),"
   },
   "decimal": {
-    "prefix": ["dz_decimal", "decimal"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_decimal",
+      "decimal"
+    ],
     "body": "${1:name}: decimal('${1:name}', { precision: ${2:precision}, scale: ${3:scale} }),"
   },
   "double": {
-    "prefix": ["dz_double", "double"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_double",
+      "double"
+    ],
     "body": "${1:name}: double('${1:name}', { precision: ${2:precision}, scale: ${3:scale} }),"
   },
   "doublePrecision": {
-    "prefix": ["dz_doublePrecision", "doublePrecision"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_doublePrecision",
+      "doublePrecision"
+    ],
     "body": "${1:name}: doublePrecision('${1:name}'),"
   },
   "pgEnum": {
-    "prefix": ["dz_pgEnum", "pgEnum"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_pgEnum",
+      "pgEnum"
+    ],
     "body": "${1:name}: pgEnum(enumName: '${1:name}', values: [${2:values}]),"
   },
   "float": {
-    "prefix": ["dz_float", "float"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_float",
+      "float"
+    ],
     "body": "${1:name}: float('${1:name}'),"
   },
   "inet": {
-    "prefix": ["dz_inet", "inet"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_inet",
+      "inet"
+    ],
     "body": "${1:name}: inet('${1:name}'),"
   },
   "int": {
-    "prefix": ["dz_int", "int"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_int",
+      "int"
+    ],
     "body": "${1:name}: int('${1:name}', { unsigned: ${2:true} }),"
   },
   "integer": {
-    "prefix": ["dz_integer", "integer"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_integer",
+      "integer"
+    ],
     "body": "${1:name}: integer('${1:name}'),"
   },
   "interval": {
-    "prefix": ["dz_interval", "interval"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_interval",
+      "interval"
+    ],
     "body": "${1:name}: interval('${1:name}', { fields: '${2:year}', precision: ${3:10} }),"
   },
   "json": {
-    "prefix": ["dz_json", "json"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_json",
+      "json"
+    ],
     "body": "${1:name}: json('${1:name}'),"
   },
   "jsonb": {
-    "prefix": ["dz_jsonb", "jsonb"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_jsonb",
+      "jsonb"
+    ],
     "body": "${1:name}: jsonb('${1:name}'),"
   },
   "macaddr": {
-    "prefix": ["dz_macaddr", "macaddr"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_macaddr",
+      "macaddr"
+    ],
     "body": "${1:name}: macaddr('${1:name}'),"
   },
   "macaddr8": {
-    "prefix": ["dz_macaddr8", "macaddr8"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_macaddr8",
+      "macaddr8"
+    ],
     "body": "${1:name}: macaddr8('${1:name}'),"
   },
   "mediumint": {
-    "prefix": ["dz_mediumint", "mediumint"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_mediumint",
+      "mediumint"
+    ],
     "body": "${1:name}: mediumint('${1:name}'),"
   },
   "numeric": {
-    "prefix": ["dz_numeric", "numeric"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_numeric",
+      "numeric"
+    ],
     "body": "${1:name}: numeric('${1:name}'),"
   },
   "real": {
-    "prefix": ["dz_real", "real"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_real",
+      "real"
+    ],
     "body": "${1:name}: real('${1:name}', { precision: ${2:precision}, scale: ${3:scale} }),"
   },
   "serial": {
-    "prefix": ["dz_serial", "serial"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_serial",
+      "serial"
+    ],
     "body": "${1:name}: serial('${1:name}'),"
   },
   "smallint": {
-    "prefix": ["dz_smallint", "smallint"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_smallint",
+      "smallint"
+    ],
     "body": "${1:name}: smallint('${1:name}'),"
   },
   "smallserial": {
-    "prefix": ["dz_smallserial", "smallserial"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_smallserial",
+      "smallserial"
+    ],
     "body": "${1:name}: smallserial('${1:name}'),"
   },
   "text": {
-    "prefix": ["dz_text", "text"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_text",
+      "text"
+    ],
     "body": "${1:name}: text('${1:name}'),"
   },
   "tinytext": {
-    "prefix": ["dz_tinytext", "tinytext"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_tinytext",
+      "tinytext"
+    ],
     "body": "${1:name}: tinytext('${1:name}'),"
   },
   "mediumtext": {
-    "prefix": ["dz_mediumtext", "mediumtext"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_mediumtext",
+      "mediumtext"
+    ],
     "body": "${1:name}: mediumtext('${1:name}'),"
   },
   "longtext": {
-    "prefix": ["dz_longtext", "longtext"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_longtext",
+      "longtext"
+    ],
     "body": "${1:name}: longtext('${1:name}'),"
   },
   "time": {
-    "prefix": ["dz_time", "time"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_time",
+      "time"
+    ],
     "body": "${1:name}: time('${1:name}'),"
   },
   "timestamp": {
-    "prefix": ["dz_timestamp", "timestamp"],
-    "scope": "javascript,typescript",
-    "body": "${1:name}: timestamp('${1:name}', { mode: '${2:mode}' }),"
+    "prefix": [
+      "dz_timestamp",
+      "timestamp"
+    ],
+    "body": "${1:name}: timestamp('${1:name}', { mode: '${2|string,date|}' }).defaultNow(),"
   },
   "tinyint": {
-    "prefix": ["dz_tinyint", "tinyint"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_tinyint",
+      "tinyint"
+    ],
     "body": "${1:name}: tinyint('${1:name}'),"
   },
   "uuid": {
-    "prefix": ["dz_uuid", "uuid"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_uuid",
+      "uuid"
+    ],
     "body": "${1:name}: uuid('${1:name}'),"
   },
   "varbinary": {
-    "prefix": ["dz_varbinary", "varbinary"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_varbinary",
+      "varbinary"
+    ],
     "body": "${1:name}: varbinary('${1:name}', { length: ${2:length} }),"
   },
   "varchar": {
-    "prefix": ["dz_varchar", "varchar"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_varchar",
+      "varchar"
+    ],
     "body": "${1:name}: varchar('${1:name}', { length: ${2:length} }),"
   },
   "year": {
-    "prefix": ["dz_year", "year"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_year",
+      "year"
+    ],
     "body": "${1:name}: year('${1:name}'),"
   },
   "references": {
-    "prefix": ["dz_references", "int references"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_references",
+      "int references"
+    ],
     "body": "${1:name}Id: int('${1:name}_id').references(() => ${2:table}.${3:column}),"
   },
   "select": {
-    "prefix": ["dz_select", "select"],
-    "scope": "javascript,typescript",
-    "body": ["await db.select({", "\t\t$1,", "\t})", "\t.from(${2:table})", "\t.where(", "\t\t$3,", "\t);", ""]
+    "prefix": [
+      "dz_select",
+      "select"
+    ],
+    "body": [
+      "await db.select({",
+      "\t\t$1,",
+      "\t})",
+      "\t.from(${2:table})",
+      "\t.where(",
+      "\t\t$3,",
+      "\t);",
+      ""
+    ]
   },
   "selectDistinct": {
-    "prefix": ["dz_select_distinct", "selectDistinct"],
-    "scope": "javascript,typescript",
-    "body": ["await db.selectDistinct({", "\t\t$1,", "\t})", "\t.from(${2:table})", "\t.where(", "\t\t$3,", "\t);", ""]
+    "prefix": [
+      "dz_select_distinct",
+      "selectDistinct"
+    ],
+    "body": [
+      "await db.selectDistinct({",
+      "\t\t$1,",
+      "\t})",
+      "\t.from(${2:table})",
+      "\t.where(",
+      "\t\t$3,",
+      "\t);",
+      ""
+    ]
   },
   "selectDistinctOn": {
-    "prefix": ["dz_select_distinct_on", "selectDistinctOn"],
-    "scope": "javascript,typescript",
-    "body": ["await db.selectDistinctOn([", "\t\t$1,", "\t]), {", "\t\t$2,", "\t})", "\t.from(${3:table})", "\t.where(", "\t\t$4,", "\t);", ""]
+    "prefix": [
+      "dz_select_distinct_on",
+      "selectDistinctOn"
+    ],
+    "body": [
+      "await db.selectDistinctOn([",
+      "\t\t$1,",
+      "\t]), {",
+      "\t\t$2,",
+      "\t})",
+      "\t.from(${3:table})",
+      "\t.where(",
+      "\t\t$4,",
+      "\t);",
+      ""
+    ]
   },
   "limit & offset": {
-    "prefix": ["dz_limit", "limit"],
-    "scope": "javascript,typescript",
-    "body": ["await db.select({", "\t\t$1,", "\t})", "\t.from(${2:table})", "\t.limit(${3:limit})", "\t.offset(${4:offset});", ""]
+    "prefix": [
+      "dz_limit",
+      "limit"
+    ],
+    "body": [
+      "await db.select({",
+      "\t\t$1,",
+      "\t})",
+      "\t.from(${2:table})",
+      "\t.limit(${3:limit})",
+      "\t.offset(${4:offset});",
+      ""
+    ]
   },
   "orderBy": {
-    "prefix": ["dz_order_by", "orderBy"],
-    "scope": "javascript,typescript",
-    "body": ["await db.select({", "\t\t$1,", "\t})", "\t.from(${2:table})", "\t.orderBy(${3:column});", ""]
+    "prefix": [
+      "dz_order_by",
+      "orderBy"
+    ],
+    "body": [
+      "await db.select({",
+      "\t\t$1,",
+      "\t})",
+      "\t.from(${2:table})",
+      "\t.orderBy(${3:column});",
+      ""
+    ]
   },
   "groupBy": {
-    "prefix": ["dz_group_by", "groupBy"],
-    "scope": "javascript,typescript",
-    "body": ["await db.select({", "\t\t$1,", "\t})", "\t.from(${2:table})", "\t.groupBy(${3:column})", "\t.having(({ $4 }) => $5);", ""]
+    "prefix": [
+      "dz_group_by",
+      "groupBy"
+    ],
+    "body": [
+      "await db.select({",
+      "\t\t$1,",
+      "\t})",
+      "\t.from(${2:table})",
+      "\t.groupBy(${3:column})",
+      "\t.having(({ $4 }) => $5);",
+      ""
+    ]
   },
   "$with": {
-    "prefix": ["dz__with", "$with"],
-    "scope": "javascript,typescript",
-    "body": ["db.\\$with(${1:alias}).as(", "\t\tdb.select({", "\t\t\t$2,", "\t\t})", "\t\t.from(${3:table})", "\t\t.where(", "\t\t\t$4,", "\t\t)", "\t);", ""]
+    "prefix": [
+      "dz__with",
+      "$with"
+    ],
+    "body": [
+      "db.\\$with(${1:alias}).as(",
+      "\t\tdb.select({",
+      "\t\t\t$2,",
+      "\t\t})",
+      "\t\t.from(${3:table})",
+      "\t\t.where(",
+      "\t\t\t$4,",
+      "\t\t)",
+      "\t);",
+      ""
+    ]
   },
   "with": {
-    "prefix": ["dz_with", "with"],
-    "scope": "javascript,typescript",
-    "body": ["db.with(${1:alias})", "\t.select({", "\t\t$2,", "\t})", "\t.from(${1:alias})", "\t.where(", "\t\t$3,", "\t)", "\t.returning({", "\t\t$4,", "\t});", ""]
+    "prefix": [
+      "dz_with",
+      "with"
+    ],
+    "body": [
+      "db.with(${1:alias})",
+      "\t.select({",
+      "\t\t$2,",
+      "\t})",
+      "\t.from(${1:alias})",
+      "\t.where(",
+      "\t\t$3,",
+      "\t)",
+      "\t.returning({",
+      "\t\t$4,",
+      "\t});",
+      ""
+    ]
   },
   "update": {
-    "prefix": ["dz_update", "update"],
-    "scope": "javascript,typescript",
-    "body": ["await db.update(${1:table}).set({", "\t\t$2,", "\t}).where(", "\t\t$3,", "\t);", ""]
+    "prefix": [
+      "dz_update",
+      "update"
+    ],
+    "body": [
+      "await db.update(${1:table}).set({",
+      "\t\t$2,",
+      "\t}).where(",
+      "\t\t$3,",
+      "\t);",
+      ""
+    ]
   },
   "insert": {
-    "prefix": ["dz_insert", "insert"],
-    "scope": "javascript,typescript",
-    "body": ["await db.insert(${1:table}).values({", "\t\t$2,", "\t});", ""]
+    "prefix": [
+      "dz_insert",
+      "insert"
+    ],
+    "body": [
+      "await db.insert(${1:table}).values({",
+      "\t\t$2,",
+      "\t});",
+      ""
+    ]
   },
   "onConflictDoNothing": {
-    "prefix": ["dz_on_conflict_do_nothing", "onConflictDoNothing"],
-    "scope": "javascript,typescript",
-    "body": ["await db.insert(${1:table}).values({", "\t\t$2,", "\t}).onConflictDoNothing({", "\t\ttarget: ${3:column},", "\t});", ""]
+    "prefix": [
+      "dz_on_conflict_do_nothing",
+      "onConflictDoNothing"
+    ],
+    "body": [
+      "await db.insert(${1:table}).values({",
+      "\t\t$2,",
+      "\t}).onConflictDoNothing({",
+      "\t\ttarget: ${3:column},",
+      "\t});",
+      ""
+    ]
   },
   "onConflictDoUpdate": {
-    "prefix": ["dz_on_conflict_do_update", "onConflictDoUpdate"],
-    "scope": "javascript,typescript",
-    "body": ["await db.insert(${1:table}).values({", "\t\t$2,", "\t}).onConflictDoUpdate({", "\t\ttarget: ${3:column},", "\t\ttargetWhere: {", "\t\t\t$4,", "\t\t},", "\t\tset: {", "\t\t\t$5,", "\t\t},", "\t\tsetWhere: {", "\t\t\t$6,", "\t\t},", "\t});", ""]
+    "prefix": [
+      "dz_on_conflict_do_update",
+      "onConflictDoUpdate"
+    ],
+    "body": [
+      "await db.insert(${1:table}).values({",
+      "\t\t$2,",
+      "\t}).onConflictDoUpdate({",
+      "\t\ttarget: ${3:column},",
+      "\t\ttargetWhere: {",
+      "\t\t\t$4,",
+      "\t\t},",
+      "\t\tset: {",
+      "\t\t\t$5,",
+      "\t\t},",
+      "\t\tsetWhere: {",
+      "\t\t\t$6,",
+      "\t\t},",
+      "\t});",
+      ""
+    ]
   },
   "onDuplicateKeyUpdate": {
-    "prefix": ["dz_on_duplicate_key_update", "onDuplicateKeyUpdate"],
-    "scope": "javascript,typescript",
-    "body": ["await db.insert(${1:table}).values({", "\t\t$2,", "\t}).onDuplicateKeyUpdate({", "\t\tset: {", "\t\t\t$3,", "\t\t},", "\t});", ""]
+    "prefix": [
+      "dz_on_duplicate_key_update",
+      "onDuplicateKeyUpdate"
+    ],
+    "body": [
+      "await db.insert(${1:table}).values({",
+      "\t\t$2,",
+      "\t}).onDuplicateKeyUpdate({",
+      "\t\tset: {",
+      "\t\t\t$3,",
+      "\t\t},",
+      "\t});",
+      ""
+    ]
   },
   "delete": {
-    "prefix": ["dz_delete", "delete"],
-    "scope": "javascript,typescript",
-    "body": ["await db.delete(${1:table}).where(", "\t\t$2,", "\t);", ""]
+    "prefix": [
+      "dz_delete",
+      "delete"
+    ],
+    "body": [
+      "await db.delete(${1:table}).where(",
+      "\t\t$2,",
+      "\t);",
+      ""
+    ]
   },
   "leftJoin": {
-    "prefix": ["dz_left_join", "leftJoin"],
-    "scope": "javascript,typescript",
-    "body": ["await db.select({", "\t\t$1,", "\t})", "\t.from(${2:table})", "\t.leftJoin(${3:table}, ${4:condition});", ""]
+    "prefix": [
+      "dz_left_join",
+      "leftJoin"
+    ],
+    "body": [
+      "await db.select({",
+      "\t\t$1,",
+      "\t})",
+      "\t.from(${2:table})",
+      "\t.leftJoin(${3:table}, ${4:condition});",
+      ""
+    ]
   },
   "rightJoin": {
-    "prefix": ["dz_right_join", "rightJoin"],
-    "scope": "javascript,typescript",
-    "body": ["await db.select({", "\t\t$1,", "\t})", "\t.from(${2:table})", "\t.rightJoin(${3:table}, ${4:condition});", ""]
+    "prefix": [
+      "dz_right_join",
+      "rightJoin"
+    ],
+    "body": [
+      "await db.select({",
+      "\t\t$1,",
+      "\t})",
+      "\t.from(${2:table})",
+      "\t.rightJoin(${3:table}, ${4:condition});",
+      ""
+    ]
   },
   "innerJoin": {
-    "prefix": ["dz_inner_join", "innerJoin"],
-    "scope": "javascript,typescript",
-    "body": ["await db.select({", "\t\t$1,", "\t})", "\t.from(${2:table})", "\t.innerJoin(${3:table}, ${4:condition});", ""]
+    "prefix": [
+      "dz_inner_join",
+      "innerJoin"
+    ],
+    "body": [
+      "await db.select({",
+      "\t\t$1,",
+      "\t})",
+      "\t.from(${2:table})",
+      "\t.innerJoin(${3:table}, ${4:condition});",
+      ""
+    ]
   },
   "fullJoin": {
-    "prefix": ["dz_full_join", "fullJoin"],
-    "scope": "javascript,typescript",
-    "body": ["await db.select({", "\t\t$1,", "\t})", "\t.from(${2:table})", "\t.fullJoin(${3:table}, ${4:condition});", ""]
+    "prefix": [
+      "dz_full_join",
+      "fullJoin"
+    ],
+    "body": [
+      "await db.select({",
+      "\t\t$1,",
+      "\t})",
+      "\t.from(${2:table})",
+      "\t.fullJoin(${3:table}, ${4:condition});",
+      ""
+    ]
   },
   "eq": {
-    "prefix": ["dz_eq", "eq"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_eq",
+      "eq"
+    ],
     "body": "eq(${1:column}, ${2:value})"
   },
   "ne": {
-    "prefix": ["dz_ne", "ne"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_ne",
+      "ne"
+    ],
     "body": "ne(${1:column}, ${2:value})"
   },
   "gt": {
-    "prefix": ["dz_gt", "gt"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_gt",
+      "gt"
+    ],
     "body": "gt(${1:column}, ${2:value})"
   },
   "gte": {
-    "prefix": ["dz_gte", "gte"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_gte",
+      "gte"
+    ],
     "body": "gte(${1:column}, ${2:value})"
   },
   "lt": {
-    "prefix": ["dz_lt", "lt"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_lt",
+      "lt"
+    ],
     "body": "lt(${1:column}, ${2:value})"
   },
   "lte": {
-    "prefix": ["dz_lte", "lte"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_lte",
+      "lte"
+    ],
     "body": "lte(${1:column}, ${2:value})"
   },
   "isNull": {
-    "prefix": ["dz_is_null", "isNull"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_is_null",
+      "isNull"
+    ],
     "body": "isNull(${1:column})"
   },
   "isNotNull": {
-    "prefix": ["dz_is_not_null", "isNotNull"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_is_not_null",
+      "isNotNull"
+    ],
     "body": "isNotNull(${1:column})"
   },
   "inArray": {
-    "prefix": ["dz_in_array", "inArray"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_in_array",
+      "inArray"
+    ],
     "body": "inArray(${1:column}, ${2:array})"
   },
   "notInArray": {
-    "prefix": ["dz_not_in_array", "notInArray"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_not_in_array",
+      "notInArray"
+    ],
     "body": "notInArray(${1:column}, ${2:array})"
   },
   "exists": {
-    "prefix": ["dz_exists", "exists"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_exists",
+      "exists"
+    ],
     "body": "exists(${1:column})"
   },
   "notExists": {
-    "prefix": ["dz_not_exists", "notExists"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_not_exists",
+      "notExists"
+    ],
     "body": "notExists(${1:column})"
   },
   "between": {
-    "prefix": ["dz_between", "between"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_between",
+      "between"
+    ],
     "body": "between(${1:column}, ${2:from}, ${3:to})"
   },
   "notBetween": {
-    "prefix": ["dz_not_between", "notBetween"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_not_between",
+      "notBetween"
+    ],
     "body": "notBetween(${1:column}, ${2:from}, ${3:to})"
   },
   "like": {
-    "prefix": ["dz_like", "like"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_like",
+      "like"
+    ],
     "body": "like(${1:column}, ${2:value})"
   },
   "ilike": {
-    "prefix": ["dz_ilike", "ilike"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_ilike",
+      "ilike"
+    ],
     "body": "ilike(${1:column}, ${2:value})"
   },
   "notIlike": {
-    "prefix": ["dz_not_ilike", "notIlike"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_not_ilike",
+      "notIlike"
+    ],
     "body": "notIlike(${1:column}, ${2:value})"
   },
   "not": {
-    "prefix": ["dz_not", "not"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_not",
+      "not"
+    ],
     "body": "not(${1:condition})"
   },
   "and": {
-    "prefix": ["dz_and", "and"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_and",
+      "and"
+    ],
     "body": "and(${1:condition}, ${2:condition})"
   },
   "or": {
-    "prefix": ["dz_or", "or"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_or",
+      "or"
+    ],
     "body": "or(${1:condition}, ${2:condition})"
   },
   "arrayContains": {
-    "prefix": ["dz_array_contains", "arrayContains"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_array_contains",
+      "arrayContains"
+    ],
     "body": "arrayContains(${1:column}, ${2:value})"
   },
   "arrayContained": {
-    "prefix": ["dz_array_contained", "arrayContained"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_array_contained",
+      "arrayContained"
+    ],
     "body": "arrayContained(${1:column}, ${2:value})"
   },
   "arrayOverlaps": {
-    "prefix": ["dz_array_overlaps", "arrayOverlaps"],
-    "scope": "javascript,typescript",
+    "prefix": [
+      "dz_array_overlaps",
+      "arrayOverlaps"
+    ],
     "body": "arrayOverlaps(${1:column}, ${2:value})"
+  },
+  "selectDynamic": {
+    "prefix": [
+      "dz_select_dynamic"
+    ],
+    "body": [
+      "await db.select({",
+      "  $1,",
+      "}).from(${2:table}).$dynamic().where($3);"
+    ]
+  },
+  "index": {
+    "prefix": [
+      "dz_index"
+    ],
+    "body": [
+      "index('${1:idx_name}')",
+      "  .on(${2:table}.${3:column}.asc(), ${4:...})",
+      "  .where(sql`${5:condition}`)",
+      "  .with({ fillfactor: ${6:70} }),"
+    ]
+  },
+  "generatedIdentity": {
+    "prefix": [
+      "dz_generated_identity"
+    ],
+    "body": "${1:name}: integer('${1:name}').primaryKey().generatedAlwaysAsIdentity(),"
+  },
+  "tsVectorGenerated": {
+    "prefix": [
+      "dz_tsvector"
+    ],
+    "body": "${1:name}: tsVector('${1:name}').generatedAlwaysAs(() => sql`to_tsvector('english', ${2:title} || ' ' || ${3:content})`),"
+  },
+  "pgPolicy": {
+    "prefix": [
+      "dz_pgPolicy",
+      "pgPolicy"
+    ],
+    "body": "pgPolicy('${1:policy_name}', { as: '${2:permissive}', for: '${3:select}', using: sql`${4:condition}` }),"
   }
 }

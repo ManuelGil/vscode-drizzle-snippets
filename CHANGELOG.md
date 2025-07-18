@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2025-07-18
+
+### Changed
+
+- Update funding model and enhance README and package description for clarity
+
 ## [1.1.0] - 2024-04-24
 
 ### Changed
@@ -19,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release
 
-[unreleased]: https://github.com/ManuelGil/vscode-drizzle-snippets/compare/v1.1.0...HEAD
+[unreleased]: https://github.com/ManuelGil/vscode-drizzle-snippets/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/ManuelGil/vscode-drizzle-snippets/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/ManuelGil/vscode-drizzle-snippets/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/ManuelGil/vscode-drizzle-snippets/releases/tag/v1.0.0
